@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GЕDHUB — компьютерный клуб</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#08090d;color:#fff;line-height:1.5}
+a{text-decoration:none;color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;background:rgba(8,9,13,.85);backdrop-filter:blur(12px);border-bottom:1px solid #20232d}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:25px;font-weight:900;letter-spacing:2px}.logo span{color:#9cff00}
+.links{display:flex;gap:28px;color:#b7bac5}.links a:hover{color:#9cff00}
+.btn{display:inline-block;background:#9cff00;color:#08090d;font-weight:800;padding:13px 22px;border-radius:9px;transition:.2s}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px #9cff0038}
+.hero{min-height:760px;padding-top:72px;display:flex;align-items:center;background:radial-gradient(circle at 75% 35%,#203500 0,#101509 18%,transparent 42%),linear-gradient(135deg,#08090d,#10131b)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center}
+.badge{display:inline-block;border:1px solid #9cff0066;color:#b9ff50;padding:8px 13px;border-radius:30px;margin-bottom:20px;font-size:13px}
+h1{font-size:clamp(48px,7vw,86px);line-height:.95;margin-bottom:24px;text-transform:uppercase}
+h1 span{color:#9cff00}
+.hero p{font-size:19px;color:#aeb2bf;max-width:590px;margin-bottom:32px}
+.hero-card{background:linear-gradient(145deg,#171b24,#0d0f14);border:1px solid #292e39;border-radius:24px;padding:28px;box-shadow:0 30px 80px #0008}
+.pc{height:330px;border-radius:16px;background:radial-gradient(circle at 50% 45%,#9cff0030,transparent 28%),linear-gradient(135deg,#121722,#090b0f);display:flex;align-items:center;justify-content:center;font-size:110px;border:1px solid #343a45}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:15px}.stat{background:#10131a;padding:14px;border-radius:12px;text-align:center}.stat b{display:block;color:#9cff00;font-size:21px}.stat small{color:#858a98}
+section{padding:90px 0}.section-title{font-size:42px;margin-bottom:12px}.section-sub{color:#888e9d;margin-bottom:35px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#11141b;border:1px solid #252a34;border-radius:18px;padding:26px}.card h3{font-size:23px;margin-bottom:8px}.card p{color:#8f95a3}.price{font-size:34px;font-weight:900;margin:18px 0;color:#9cff00}.card ul{list-style:none;color:#bfc3ce;margin-bottom:22px}.card li{margin:8px 0}.card li:before{content:"✓";color:#9cff00;margin-right:8px}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.feature{padding:25px;background:#0f1218;border-radius:16px;border:1px solid #232832}.icon{font-size:32px;margin-bottom:12px}.feature p{color:#858b99}
+.booking{background:linear-gradient(135deg,#11170a,#10131a);border:1px solid #34451b;border-radius:24px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.booking p{color:#9da3b0;margin-top:8px}
+footer{border-top:1px solid #20232d;padding:35px 0;color:#777d8a}.footer{display:flex;justify-content:space-between}
+@media(max-width:800px){.links{display:none}.hero-grid{grid-template-columns:1fr}.hero{padding-top:120px;padding-bottom:70px}.hero-card{display:none}.cards{grid-template-columns:1fr}.feature-grid{grid-template-columns:1fr 1fr}.booking{flex-direction:column;align-items:flex-start}.footer{flex-direction:column;gap:10px}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><div class="logo">GЕD<span>HUB</span></div><div class="links"><a href="#prices">Тарифы</a><a href="#features">Почему мы</a><a href="#booking">Бронь</a></div><a class="btn" href="#booking">Забронировать</a></div></nav>
+
+<header class="hero">
+<div class="container hero-grid">
+<div>
+<div class="badge">⚡ КОМПЬЮТЕРНЫЙ КЛУБ</div>
+<h1>ИГРАЙ.<br><span>ПОБЕЖДАЙ.</span><br>ПОВТОРЯЙ.</h1>
+<p>GЕDHUB — место, где мощное железо, комфорт и атмосфера объединяются ради одной цели: твоей следующей победы.</p>
+<a class="btn" href="#prices">Посмотреть тарифы →</a>
+</div>
+<div class="hero-card">
+<div class="pc">🖥️</div>
+<div class="stats"><div class="stat"><b>RTX</b><small>мощные GPU</small></div><div class="stat"><b>240 Hz</b><small>мониторы</small></div><div class="stat"><b>24/7</b><small>работаем</small></div></div>
+</div>
+</div>
+</header>
+
+<section id="prices"><div class="container">
+<h2 class="section-title">Тарифы</h2><p class="section-sub">Выбирай формат и залетай в игру.</p>
+<div class="cards">
+<div class="card"><h3>Standard</h3><p>Комфортное место для игры</p><div class="price">500 ₸/час</div><ul><li>Игровой ПК</li><li>240 Hz монитор</li><li>Гарнитура</li></ul><a class="btn" href="#booking">Выбрать</a></div>
+<div class="card"><h3>VIP</h3><p>Больше мощности и комфорта</p><div class="price">700 ₸/час</div><ul><li>Топовый игровой ПК</li><li>240 Hz монитор</li><li>Премиум периферия</li></ul><a class="btn" href="#booking">Выбрать</a></div>
+<div class="card"><h3>Ночной</h3><p>Играй всю ночь выгодно</p><div class="price">3 000 ₸</div><ul><li>С 23:00 до 08:00</li><li>Любое доступное место</li><li>Заряд энергии на всю ночь</li></ul><a class="btn" href="#booking">Выбрать</a></div>
+</div></div></section>
+
+<section id="features"><div class="container">
+<h2 class="section-title">Почему GЕDHUB?</h2><p class="section-sub">Всё, что нужно для серьёзной игры.</p>
+<div class="feature-grid">
+<div class="feature"><div class="icon">🎮</div><h3>Топовое железо</h3><p>Высокий FPS и стабильная производительность.</p></div>
+<div class="feature"><div class="icon">⚡</div><h3>240 Hz</h3><p>Плавная картинка для быстрых реакций.</p></div>
+<div class="feature"><div class="icon">☕</div><h3>Комфорт</h3><p>Удобные кресла и всё необходимое под рукой.</p></div>
+<div class="feature"><div class="icon">🏆</div><h3>Турниры</h3><p>Соревнования, команды и призы для игроков.</p></div>
+</div></div></section>
+
+<section id="booking"><div class="container"><div class="booking"><div><h2 class="section-title">Готов к игре?</h2><p>Забронируй место прямо сейчас.</p></div><a class="btn" href="tel:+77000000000">Позвонить и забронировать</a></div></div></section>
+
+<footer><div class="container footer"><span>© 2026 GЕDHUB</span><span>Компьютерный клуб · Играй на максимум</span></div></footer>
+</body>
+</html>
